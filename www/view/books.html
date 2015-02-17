@@ -1,10 +1,13 @@
 <ion-view title="Books">  
+
+
   <ion-content>
+    <input type="text" placeholder="Search" ng-model="searchText"/>
     <ion-list>
-      <ion-item ng-repeat="book in books" href="/tabs/users/{{book.id}}">
+      <ion-item ng-repeat="book in books | filter:searchText" href="/tabs/users/{{book.id}}">
         <div class="row">
           <div class="col-10">
-            <img src="http://www.clker.com/cliparts/2/d/6/6/12586618121108987169calgarc_Sticker_SVG(inkscape).svg.thumb.png"/>
+            <img src="http://www.clker.com/cliparts/2/d/6/6/12586618121108987169calgarc_Sticker_SVG(inkscape).svg.thumb.png" class="col"/>
           </div>
           <div class="col">
             <h3>{{book.name}}</h3>

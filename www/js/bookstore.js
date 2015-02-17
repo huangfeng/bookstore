@@ -8,6 +8,15 @@ angular.module('bookstore', ['ionic', 'bookmodule'])
       templateUrl: 'view/tabs.html'
     })
 
+    .state('tabs.home',{
+      url: '/home',
+      views: {
+        'home-tabs': {
+          templateUrl: 'view/home.html'    
+        }
+      }
+    })
+
     .state('tabs.books',{
       url: '/books',
       views: {
@@ -17,6 +26,15 @@ angular.module('bookstore', ['ionic', 'bookmodule'])
         }
       }
     })
-      
-  $urlRouterProvider.otherwise('/tabs/books')
+
+    .state('tabs.setting',{
+      url: '/setting',
+      views: {
+        'setting-tabs': {
+          templateUrl: 'view/setting.html'
+        }  
+      }
+    })
+
+  $urlRouterProvider.otherwise('/tabs/home')
 })

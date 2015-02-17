@@ -1,14 +1,18 @@
 <ion-tabs class="tabs-stable">
 
-  <ion-tab title="All Books" href="/tabs/books">
+  <ion-tab title="Home" ui-sref="tabs.home">
+    <ion-nav-view name="home-tabs">
+    </ion-nav-view>
+  </ion-tab>
+ 
+  <ion-tab title="All Books" ui-sref="tabs.books">
     <ion-nav-view name="books-tabs">
     </ion-nav-view>
   </ion-tab>
 
-  <ion-tab title="Catalog">
-  </ion-tab>
-
-  <ion-tab title="Search">
+  <ion-tab title="Setting" ui-sref="tabs.setting">
+    <ion-nav-view name="setting-tabs">
+    </ion-nav-view>
   </ion-tab>
 
 </ion-tabs>

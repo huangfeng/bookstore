@@ -1,0 +1,18 @@
+<ion-view title="Books">  
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="book in books" href="/tabs/users/{{book.id}}">
+        <div class="row">
+          <div class="col-10">
+            <img src="http://www.clker.com/cliparts/2/d/6/6/12586618121108987169calgarc_Sticker_SVG(inkscape).svg.thumb.png"/>
+          </div>
+          <div class="col">
+            <h3>{{book.name}}</h3>
+            <p>price : {{book.price}}</p>
+            <p>Info : {{book.description}}</p>
+          </div>
+        </div>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
